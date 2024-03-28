@@ -13,7 +13,7 @@ class mqProducer(mqProducerInterface):
 
         self.channel = self.connection.channel()
 
-        exchange = self.channel.exchange_declare(exchange="Exchange Name")
+        exchange = self.channel.exchange_declare(exchange=self.exchange_name)
         
     def publishOrder(self, message: str) -> None:
       
